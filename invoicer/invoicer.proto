@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/rohanchauhan02/grpc-02/invoicer";
+
+package invoicer;
+
+service Invoicer {
+    rpc Create(CreateRequest) returns (CreateResponse);
+}
+
+message CreateRequest{
+   string name = 1;
+}
+
+message CreateResponse{
+    string msg = 1;
+}
+
